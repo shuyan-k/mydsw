@@ -1,0 +1,5 @@
+# DSH bundle 装配层：安装本 bundle 时把插件插入当前 profile。
+- insert:
+    - id: deepseek-web
+      name: '@c7sh8y9/mydsw'
+      config: {}

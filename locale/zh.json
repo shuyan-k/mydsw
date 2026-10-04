@@ -1,0 +1,4 @@
+{
+  "title": "DeepSeek 网页版对话",
+  "description": "把 chat.deepseek.com 网页版接进 DSH：侧边栏面板里看历史对话、继续发消息，并给 Agent 一个 deepseek_web 工具。"
+}

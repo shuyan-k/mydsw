@@ -1,0 +1,23 @@
+# 依赖与构建产物
+node_modules/
+*.tgz
+package-lock.json
+pnpm-lock.yaml
+
+# 每次改动留下的手工备份
+*.bak
+*.bak-*
+*.orig
+*.rej
+
+# 本机凭据，千万别提交
+.npmrc
+.env
+.env.*
+
+# 编辑器 / 系统杂物
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log

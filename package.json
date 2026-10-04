@@ -1,0 +1,73 @@
+{
+  "name": "@c7sh8y9/mydsw",
+  "version": "1.0.2",
+  "type": "module",
+  "description": "在 DSH 里访问 chat.deepseek.com 网页版对话：侧边栏聊天面板（Markdown 渲染 + 图片上传 + 读历史 + 发消息）+ 一个 Agent 工具 deepseek_web。",
+  "main": "./index.js",
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/zh.json": "./locale/zh.json",
+    "./locale/en.json": "./locale/en.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "lib/pow.js",
+    "lib/sha3_wasm_bg.wasm",
+    "locale/zh.json",
+    "locale/en.json",
+    "icon.svg",
+    "cordis.patch.yml",
+    "README.md",
+    "INSTALL.md",
+    "THIRD-PARTY-NOTICES.md",
+    "LICENSE"
+  ],
+  "meta": {
+    "title": "DeepSeek 网页版对话（DSH 插件）",
+    "description": "把 chat.deepseek.com 网页版接进 DSH：侧边栏面板里看历史对话、继续发消息（支持 Markdown 渲染与图片上传），并给 Agent 一个 deepseek_web 工具。"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  },
+  "license": "MIT",
+  "author": "c7sh8y9",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shuyan-k/mydsw.git"
+  },
+  "homepage": "https://github.com/shuyan-k/mydsw#readme",
+  "bugs": {
+    "url": "https://github.com/shuyan-k/mydsw/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek",
+    "deepseek-web",
+    "chat",
+    "plugin",
+    "cordis",
+    "llm",
+    "agent"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  }
+}
